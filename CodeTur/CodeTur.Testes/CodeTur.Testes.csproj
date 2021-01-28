@@ -19,4 +19,9 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CodeTur.Comum\CodeTur.Comum.csproj" />
+    <ProjectReference Include="..\CodeTur.Dominio\CodeTur.Dominio.csproj" />
+  </ItemGroup>
+
 </Project>

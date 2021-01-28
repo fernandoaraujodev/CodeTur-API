@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "/XCdtoBWIiA893Y/dar/uPfJjuMRjA4SfTe9mketuYhinqGE821JsOR3D1rV3frFYRsulr2TvykcdrKSURnZbg==",
+  "dgSpecHash": "p+LCX4VYqnmD0Ib26myWF4VcfsECT+yg3oOd52vsHi+QdBYTSJBcSCnebV7M9TcPigelYHDsWmUwvox7hX//tA==",
   "success": true,
   "projectFilePath": "C:\\Users\\pc\\Documents\\cODEtUR\\CodeTur\\CodeTur.Comum\\CodeTur.Comum.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\pc\\.nuget\\packages\\flunt\\1.0.5\\flunt.1.0.5.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -1,0 +1,4 @@
+C:\Users\pc\Documents\cODEtUR\CodeTur\CodeTur.Dominio\bin\Debug\netcoreapp3.1\CodeTur.Comum.dll
+C:\Users\pc\Documents\cODEtUR\CodeTur\CodeTur.Dominio\obj\Debug\netcoreapp3.1\CodeTur.Dominio.csprojAssemblyReference.cache
+C:\Users\pc\Documents\cODEtUR\CodeTur\CodeTur.Dominio\obj\Debug\netcoreapp3.1\CodeTur.Dominio.AssemblyInfoInputs.cache
+C:\Users\pc\Documents\cODEtUR\CodeTur\CodeTur.Dominio\obj\Debug\netcoreapp3.1\CodeTur.Dominio.AssemblyInfo.cs
