@@ -17,6 +17,18 @@
           "lib/netstandard2.0/Flunt.dll": {}
         }
       },
+      "Flunt.Br/1.4.0": {
+        "type": "package",
+        "dependencies": {
+          "Flunt": "1.0.4"
+        },
+        "compile": {
+          "lib/netstandard2.0/Flunt.Br.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Flunt.Br.dll": {}
+        }
+      },
       "Microsoft.CodeCoverage/16.7.1": {
         "type": "package",
         "compile": {
@@ -1676,7 +1688,8 @@
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
           "CodeTur.Comum": "1.0.0",
-          "Flunt": "1.0.5"
+          "Flunt": "1.0.5",
+          "Flunt.Br": "1.4.0"
         },
         "compile": {
           "bin/placeholder/CodeTur.Dominio.dll": {}
@@ -1730,6 +1743,19 @@
         "flunt.1.0.5.nupkg.sha512",
         "flunt.nuspec",
         "lib/netstandard2.0/Flunt.dll"
+      ]
+    },
+    "Flunt.Br/1.4.0": {
+      "sha512": "piynUU5SzU/rafD2qaSeila0jW2D47wifBD34pLXdV/sCh7IbCPHfDuuwnONdcansLY5P4a0fdelGkL7Vv4jHw==",
+      "type": "package",
+      "path": "flunt.br/1.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "flunt-icon-br_compressed.png",
+        "flunt.br.1.4.0.nupkg.sha512",
+        "flunt.br.nuspec",
+        "lib/netstandard2.0/Flunt.Br.dll"
       ]
     },
     "Microsoft.CodeCoverage/16.7.1": {

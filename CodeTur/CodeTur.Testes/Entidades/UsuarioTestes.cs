@@ -1,16 +1,31 @@
 ﻿using CodeTur.Comum.Enum;
 using CodeTur.Dominio.Entidades;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using Xunit;
 
 namespace CodeTur.Testes.Entidades
 {
-    class UsuarioTestes
+    public class UsuarioTestes
     {
-        public void Usuario()
+        [Fact]
+        public void DeveRetornarErroSeUsuarioForInvalido()
         {
-            var usuario = new Usuario("", "", "", EnTipoUsuario.Admin);
+            var usuario = new Usuario("", "", "", EnTipoUsuario.Admin );
+            //testando com Assert (xUnit)
+            Assert.True(usuario.Invalid, "Usuario é valido");
+        }
+
+        [Fact]
+        public void DeveRetornarSucessoSeUsuarioForValido()
+        {
+            var usuario = new Usuario("Fernando Araujo", "fernandoa@senai.br", "senha12", EnTipoUsuario.Admin);
+            usuario.AdicionarTelefone("(11) 921984021");
+
+            //testando com Assert (xUnit)
+            Assert.True(usuario.Valid, "Usuario é invalido");
+        }
+
+        public void Usuario()
+        {    
         }
     }
 }

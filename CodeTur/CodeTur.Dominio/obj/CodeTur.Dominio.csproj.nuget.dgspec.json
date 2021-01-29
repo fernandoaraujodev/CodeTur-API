@@ -107,6 +107,10 @@
             "Flunt": {
               "target": "Package",
               "version": "[1.0.5, )"
+            },
+            "Flunt.Br": {
+              "target": "Package",
+              "version": "[1.4.0, )"
             }
           },
           "imports": [

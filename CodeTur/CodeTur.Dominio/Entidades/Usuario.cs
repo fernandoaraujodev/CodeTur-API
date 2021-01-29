@@ -4,13 +4,16 @@ using System.Diagnostics.Contracts;
 using System.Text;
 using CodeTur.Comum.Entidades;
 using CodeTur.Comum.Enum;
+using Flunt.Br.Extensions;
 using Flunt.Validations;
 
 namespace CodeTur.Dominio.Entidades
 {
     public class Usuario : Entidade
     {
-        public Usuario(string nome, string email, string telefone, string senha, EnTipoUsuario tipoUsuario)
+
+        //Não consegue instanciar um usuario sem passar essas infos - CONSTRUTOR
+        public Usuario(string nome, string email, string senha, EnTipoUsuario tipoUsuario)
         {
             //Validando campos obrigatórios + regra de negócio
             AddNotifications(new Flunt.Validations.Contract()
@@ -22,10 +25,14 @@ namespace CodeTur.Dominio.Entidades
                 .HasMaxLen(senha, 12, "Senha", "A senha deve conter no maximo 12 caracteres")
             );
 
-            Nome = nome;
-            Email = email;
-            Senha = senha;
-            TipoUsuario = tipoUsuario;
+            //Condição para instanciar usuario
+            if (Valid)
+            {
+                Nome = nome;
+                Email = email;
+                Senha = senha;
+                TipoUsuario = tipoUsuario;
+            }
         }
 
         public string Nome { get; private set; }
@@ -33,5 +40,18 @@ namespace CodeTur.Dominio.Entidades
         public string Telefone { get; private set; }
         public string Senha { get; private set; }
         public EnTipoUsuario TipoUsuario { get; private set; }
+
+        //criando metodos para gerenciar possiveis atualizações no perfil, adc telefone, mudar senha
+        public void AdicionarTelefone(string telefone)
+        {
+            //Validando campos obrigatórios + regra de negócio
+            AddNotifications(new Flunt.Validations.Contract()
+                .Requires()
+                .IsNewFormatCellPhone(telefone, "Telefone", "Informe um telefone válido")
+            );
+
+            Telefone = telefone;
+        }
+
     }
 }
