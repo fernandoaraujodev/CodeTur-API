@@ -40,6 +40,7 @@ namespace CodeTur.Dominio.Entidades
         public string Telefone { get; private set; }
         public string Senha { get; private set; }
         public EnTipoUsuario TipoUsuario { get; private set; }
+        public IReadOnlyCollection<Comentario> Comentarios { get; private set; }
 
         //criando metodos para gerenciar possiveis atualizações no perfil, adc telefone, mudar senha
         public void AdicionarTelefone(string telefone)
@@ -50,7 +51,38 @@ namespace CodeTur.Dominio.Entidades
                 .IsNewFormatCellPhone(telefone, "Telefone", "Informe um telefone válido")
             );
 
-            Telefone = telefone;
+            if(Valid)
+                Telefone = telefone;
+        }
+
+        public void AlterarSenha(string senha)
+        {
+            //Validando campos obrigatórios + regra de negócio
+            AddNotifications(new Flunt.Validations.Contract()
+                .Requires()
+                .HasMinLen(senha, 6, "Senha", "A senha deve conter pelo menos 6 caracteres")
+                .HasMaxLen(senha, 12, "Senha", "A senha deve conter no maximo 12 caracteres")
+            );
+
+            if (Valid)
+                Senha = senha;
+        }
+
+        public void AlterarUsuario(string email, string nome)
+        {
+            //Validando campos obrigatórios + regra de negócio
+            AddNotifications(new Flunt.Validations.Contract()
+                .Requires()
+                .HasMinLen(nome, 3, "Nome", "O nome deve ter pelo menos 3 caracteres")
+                .HasMaxLen(nome, 40, "Nome", "O nome deve ter no máximo 40 caracteres")
+                .IsEmail(email, "Email", "Informe um e-mail válido")
+            );
+
+            if(Valid)
+            {
+                Nome = nome;
+                Email = email;
+            }
         }
 
     }
