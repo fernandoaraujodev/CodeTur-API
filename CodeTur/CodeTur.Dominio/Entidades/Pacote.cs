@@ -6,7 +6,7 @@ using System.Text;
 
 namespace CodeTur.Dominio.Entidades
 {
-    public class Pacote : Usuario
+    public class Pacote : Entidade
     {
         //deixando visivel os comentarios somente nessa classe
         private readonly List<Comentario> _comentarios;
