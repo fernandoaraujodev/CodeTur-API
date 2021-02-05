@@ -22,7 +22,6 @@ namespace CodeTur.Dominio.Entidades
                 .HasMaxLen(nome, 40, "Nome", "O nome deve ter no máximo 40 caracteres")
                 .IsEmail(email, "Email", "Informe um e-mail válido")
                 .HasMinLen(senha, 6, "Senha", "A senha deve conter pelo menos 6 caracteres")
-                .HasMaxLen(senha, 12, "Senha", "A senha deve conter no maximo 12 caracteres")
             );
 
             //Condição para instanciar usuario

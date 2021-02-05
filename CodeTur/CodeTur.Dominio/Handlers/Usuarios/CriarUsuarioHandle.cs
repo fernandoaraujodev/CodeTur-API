@@ -1,0 +1,55 @@
+﻿using CodeTur.Comum.Handlers;
+using CodeTur.Comum.Commands;
+using CodeTur.Dominio.Commands.Usuario;
+using Flunt.Notifications;
+using CodeTur.Dominio.Repositorios;
+using CodeTur.Comum.Utils;
+using CodeTur.Dominio.Entidades;
+
+namespace CodeTur.Dominio.Handlers.Usuarios
+{
+    public class CriarUsuarioHandle : Notifiable, IHandler<CriarContaCommand>
+    {
+
+        //Injeção de dependência
+        private readonly IUsuarioRepositorio _usuarioRepositorio;
+
+        public CriarUsuarioHandle(IUsuarioRepositorio usuarioRepositorio)
+        {
+            _usuarioRepositorio = usuarioRepositorio;
+        }
+
+        public ICommandResult Handle(CriarContaCommand command)
+        {
+            //Valida Command
+            command.Validar();
+
+            if (command.Invalid)
+                return new GenericCommandResult(false, "Dados incorretos", command.Notifications);
+
+            //Verifica se email já existe
+            //Fake Repo
+            var usuarioExiste = _usuarioRepositorio.BuscarPorEmail(command.Email);
+
+            if(usuarioExiste != null)
+                return new GenericCommandResult(false, "Email já cadastrado", null);
+
+            //Criptografa a senha 
+            command.Senha = Cripto.CriptografarSenha(command.Senha);
+
+            //Salva Usuario
+            var usuario = new Usuario(command.Nome, command.Email, command.Senha, command.TipoUsuario);
+
+            if (!string.IsNullOrEmpty(command.Telefone))
+                usuario.AdicionarTelefone(command.Telefone);
+
+            if (usuario.Invalid)
+                return new GenericCommandResult(false, "Usuário invalido", usuario.Notifications);
+
+
+            return new GenericCommandResult(true, "Usuario criado", "token");
+        }
+
+     
+    }
+}

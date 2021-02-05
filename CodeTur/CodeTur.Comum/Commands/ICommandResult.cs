@@ -1,6 +1,6 @@
 ﻿namespace CodeTur.Comum.Commands
 {
-    class ICommandResult
+    public class ICommandResult
     {
 
     }

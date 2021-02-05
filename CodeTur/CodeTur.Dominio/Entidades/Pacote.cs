@@ -1,4 +1,5 @@
 ﻿using CodeTur.Comum.Entidades;
+using Flunt.Notifications;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,9 +20,9 @@ namespace CodeTur.Dominio.Entidades
             //verifiicar se usuario ja tem um comentario no pacote
             //evitar spam
             if (_comentarios.Any(x => x.IdUsuario == comentario.IdUsuario))
-                AddNotification("Comentarios", "Usuario já possui um comentário nesse pacote");
+                AddNotification("Comentarios", "Usuário já possui um comentário neste pacote");
 
-            if(Valid)
+            if (Valid)
             _comentarios.Add(comentario);
         }
     }

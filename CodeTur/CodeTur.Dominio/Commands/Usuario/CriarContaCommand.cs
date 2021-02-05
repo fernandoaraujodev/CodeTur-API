@@ -8,8 +8,15 @@ namespace CodeTur.Dominio.Commands.Usuario
 {
     //TRABALHANDO com CQRS
     //Command = Somente as prop de entrada e as validações, sem nenhum método
-    class CriarContaCommand : Notifiable, ICommand
+    public class CriarContaCommand : Notifiable, ICommand
     {
+        
+        //Construtor vazio para testes
+        public CriarContaCommand()
+        {
+
+        }
+
         public CriarContaCommand(string nome, string email, string telefone, string senha, EnTipoUsuario tipoUsuario)
         {
             Nome = nome;
