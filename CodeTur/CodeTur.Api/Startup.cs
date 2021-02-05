@@ -62,9 +62,10 @@ namespace CodeTur.Api
                 });
 
 
-            services.AddSwaggerGen(o =>
-                o.SwaggerDoc("v1", new OpenApiInfo { Title= "APi CodeTur", Version= "V1" })
-            );
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Api CodeTur", Version = "v1" });
+            });
 
         }
 
@@ -75,7 +76,7 @@ namespace CodeTur.Api
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(o => o.SwaggerEndpoint("swagger/v1/swagger.json", "API CodeTur V1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "API CodeTur V1"));
 
             }
 
