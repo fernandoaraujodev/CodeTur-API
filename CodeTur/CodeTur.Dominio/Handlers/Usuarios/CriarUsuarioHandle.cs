@@ -8,7 +8,7 @@ using CodeTur.Dominio.Entidades;
 
 namespace CodeTur.Dominio.Handlers.Usuarios
 {
-    public class CriarUsuarioHandle : Notifiable, IHandler<CriarContaCommand>
+    public class CriarUsuarioHandle : Notifiable, IHandler<CriarUsuarioCommand>
     {
 
         //Injeção de dependência
@@ -19,7 +19,7 @@ namespace CodeTur.Dominio.Handlers.Usuarios
             _usuarioRepositorio = usuarioRepositorio;
         }
 
-        public ICommandResult Handle(CriarContaCommand command)
+        public ICommandResult Handle(CriarUsuarioCommand command)
         {
             //Valida Command
             command.Validar();
@@ -35,7 +35,7 @@ namespace CodeTur.Dominio.Handlers.Usuarios
                 return new GenericCommandResult(false, "Email já cadastrado", null);
 
             //Criptografa a senha 
-            command.Senha = Cripto.CriptografarSenha(command.Senha);
+            command.Senha = Senha.Criptografar(command.Senha);
 
             //Salva Usuario
             var usuario = new Usuario(command.Nome, command.Email, command.Senha, command.TipoUsuario);

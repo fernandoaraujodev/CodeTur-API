@@ -41,7 +41,7 @@ namespace CodeTur.Testes.Repositorios
             return Usuarios.FirstOrDefault(x => x.Id == id);
         }
 
-        public ICollection<Usuario> Listar(bool? ativo = null)
+        public ICollection<Usuario> Listar()
         {
             return Usuarios;
         }

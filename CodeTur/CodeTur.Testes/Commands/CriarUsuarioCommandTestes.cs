@@ -9,7 +9,7 @@ namespace CodeTur.Testes.Commands
         [Fact]
         public void DeveRetornarErrosSeDadosInvalidos()
         {
-            var command = new CriarContaCommand();
+            var command = new CriarUsuarioCommand();
 
             //smp validar antes de executar
             command.Validar();
@@ -20,7 +20,7 @@ namespace CodeTur.Testes.Commands
         [Fact]
         public void DeveRetornaErrosSeDadosInvalidos()
         {
-            var command = new CriarContaCommand("Fernando", "aluno@senai.br", "", "senha1", Comum.Enum.EnTipoUsuario.Admin) ;
+            var command = new CriarUsuarioCommand("Fernando", "aluno@senai.br", "", "senha1", Comum.Enum.EnTipoUsuario.Admin) ;
 
             //smp validar antes de executar
             command.Validar();

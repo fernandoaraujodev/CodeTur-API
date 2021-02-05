@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pc\\Documents\\cODEtUR\\CodeTur\\CodeTur.Api\\CodeTur.Api.csproj": {}
+    "C:\\Users\\45467298801\\Documents\\cODEtUr\\CodeTur\\CodeTur.Api\\CodeTur.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pc\\Documents\\cODEtUR\\CodeTur\\CodeTur.Api\\CodeTur.Api.csproj": {
+    "C:\\Users\\45467298801\\Documents\\cODEtUr\\CodeTur\\CodeTur.Api\\CodeTur.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pc\\Documents\\cODEtUR\\CodeTur\\CodeTur.Api\\CodeTur.Api.csproj",
+        "projectUniqueName": "C:\\Users\\45467298801\\Documents\\cODEtUr\\CodeTur\\CodeTur.Api\\CodeTur.Api.csproj",
         "projectName": "CodeTur.Api",
-        "projectPath": "C:\\Users\\pc\\Documents\\cODEtUR\\CodeTur\\CodeTur.Api\\CodeTur.Api.csproj",
-        "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pc\\Documents\\cODEtUR\\CodeTur\\CodeTur.Api\\obj\\",
+        "projectPath": "C:\\Users\\45467298801\\Documents\\cODEtUr\\CodeTur\\CodeTur.Api\\CodeTur.Api.csproj",
+        "packagesPath": "C:\\Users\\45467298801\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\45467298801\\Documents\\cODEtUr\\CodeTur\\CodeTur.Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\45467298801\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\pc\\Documents\\cODEtUR\\CodeTur\\CodeTur.Infra.Data\\CodeTur.Infra.Data.csproj": {
-                "projectPath": "C:\\Users\\pc\\Documents\\cODEtUR\\CodeTur\\CodeTur.Infra.Data\\CodeTur.Infra.Data.csproj"
+              "C:\\Users\\45467298801\\Documents\\cODEtUr\\CodeTur\\CodeTur.Infra.Data\\CodeTur.Infra.Data.csproj": {
+                "projectPath": "C:\\Users\\45467298801\\Documents\\cODEtUr\\CodeTur\\CodeTur.Infra.Data\\CodeTur.Infra.Data.csproj"
               }
             }
           }
@@ -93,17 +93,17 @@
         }
       }
     },
-    "C:\\Users\\pc\\Documents\\cODEtUR\\CodeTur\\CodeTur.Comum\\CodeTur.Comum.csproj": {
+    "C:\\Users\\45467298801\\Documents\\cODEtUr\\CodeTur\\CodeTur.Comum\\CodeTur.Comum.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pc\\Documents\\cODEtUR\\CodeTur\\CodeTur.Comum\\CodeTur.Comum.csproj",
+        "projectUniqueName": "C:\\Users\\45467298801\\Documents\\cODEtUr\\CodeTur\\CodeTur.Comum\\CodeTur.Comum.csproj",
         "projectName": "CodeTur.Comum",
-        "projectPath": "C:\\Users\\pc\\Documents\\cODEtUR\\CodeTur\\CodeTur.Comum\\CodeTur.Comum.csproj",
-        "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pc\\Documents\\cODEtUR\\CodeTur\\CodeTur.Comum\\obj\\",
+        "projectPath": "C:\\Users\\45467298801\\Documents\\cODEtUr\\CodeTur\\CodeTur.Comum\\CodeTur.Comum.csproj",
+        "packagesPath": "C:\\Users\\45467298801\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\45467298801\\Documents\\cODEtUr\\CodeTur\\CodeTur.Comum\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\45467298801\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -129,6 +129,10 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "BCrypt.Net-Core": {
+              "target": "Package",
+              "version": "[1.6.0, )"
+            },
             "Flunt": {
               "target": "Package",
               "version": "[1.0.5, )"
@@ -153,17 +157,17 @@
         }
       }
     },
-    "C:\\Users\\pc\\Documents\\cODEtUR\\CodeTur\\CodeTur.Dominio\\CodeTur.Dominio.csproj": {
+    "C:\\Users\\45467298801\\Documents\\cODEtUr\\CodeTur\\CodeTur.Dominio\\CodeTur.Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pc\\Documents\\cODEtUR\\CodeTur\\CodeTur.Dominio\\CodeTur.Dominio.csproj",
+        "projectUniqueName": "C:\\Users\\45467298801\\Documents\\cODEtUr\\CodeTur\\CodeTur.Dominio\\CodeTur.Dominio.csproj",
         "projectName": "CodeTur.Dominio",
-        "projectPath": "C:\\Users\\pc\\Documents\\cODEtUR\\CodeTur\\CodeTur.Dominio\\CodeTur.Dominio.csproj",
-        "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pc\\Documents\\cODEtUR\\CodeTur\\CodeTur.Dominio\\obj\\",
+        "projectPath": "C:\\Users\\45467298801\\Documents\\cODEtUr\\CodeTur\\CodeTur.Dominio\\CodeTur.Dominio.csproj",
+        "packagesPath": "C:\\Users\\45467298801\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\45467298801\\Documents\\cODEtUr\\CodeTur\\CodeTur.Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\45467298801\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -177,8 +181,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\pc\\Documents\\cODEtUR\\CodeTur\\CodeTur.Comum\\CodeTur.Comum.csproj": {
-                "projectPath": "C:\\Users\\pc\\Documents\\cODEtUR\\CodeTur\\CodeTur.Comum\\CodeTur.Comum.csproj"
+              "C:\\Users\\45467298801\\Documents\\cODEtUr\\CodeTur\\CodeTur.Comum\\CodeTur.Comum.csproj": {
+                "projectPath": "C:\\Users\\45467298801\\Documents\\cODEtUr\\CodeTur\\CodeTur.Comum\\CodeTur.Comum.csproj"
               }
             }
           }
@@ -221,17 +225,17 @@
         }
       }
     },
-    "C:\\Users\\pc\\Documents\\cODEtUR\\CodeTur\\CodeTur.Infra.Data\\CodeTur.Infra.Data.csproj": {
+    "C:\\Users\\45467298801\\Documents\\cODEtUr\\CodeTur\\CodeTur.Infra.Data\\CodeTur.Infra.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pc\\Documents\\cODEtUR\\CodeTur\\CodeTur.Infra.Data\\CodeTur.Infra.Data.csproj",
+        "projectUniqueName": "C:\\Users\\45467298801\\Documents\\cODEtUr\\CodeTur\\CodeTur.Infra.Data\\CodeTur.Infra.Data.csproj",
         "projectName": "CodeTur.Infra.Data",
-        "projectPath": "C:\\Users\\pc\\Documents\\cODEtUR\\CodeTur\\CodeTur.Infra.Data\\CodeTur.Infra.Data.csproj",
-        "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pc\\Documents\\cODEtUR\\CodeTur\\CodeTur.Infra.Data\\obj\\",
+        "projectPath": "C:\\Users\\45467298801\\Documents\\cODEtUr\\CodeTur\\CodeTur.Infra.Data\\CodeTur.Infra.Data.csproj",
+        "packagesPath": "C:\\Users\\45467298801\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\45467298801\\Documents\\cODEtUr\\CodeTur\\CodeTur.Infra.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\45467298801\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -245,8 +249,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\pc\\Documents\\cODEtUR\\CodeTur\\CodeTur.Dominio\\CodeTur.Dominio.csproj": {
-                "projectPath": "C:\\Users\\pc\\Documents\\cODEtUR\\CodeTur\\CodeTur.Dominio\\CodeTur.Dominio.csproj"
+              "C:\\Users\\45467298801\\Documents\\cODEtUr\\CodeTur\\CodeTur.Dominio\\CodeTur.Dominio.csproj": {
+                "projectPath": "C:\\Users\\45467298801\\Documents\\cODEtUr\\CodeTur\\CodeTur.Dominio\\CodeTur.Dominio.csproj"
               }
             }
           }

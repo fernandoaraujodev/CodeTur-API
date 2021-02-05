@@ -9,15 +9,14 @@ namespace CodeTur.Dominio.Repositorios
     {
         void Adicionar(Usuario usuario);
 
+        //Alterar senha tbm segue o msm principio
         void Alterar(Usuario usuario);
-
-        void AlterarSenha(Usuario usuario);
 
         Usuario BuscarPorEmail(string email);
 
-        Usuario BuscarPorId(Guid Id);
+        Usuario BuscarPorId(Guid id);
 
         //somente pacotes habilitados
-        ICollection<Usuario> Listar(bool? ativo = null);
+        ICollection<Usuario> Listar();
     }
 }
