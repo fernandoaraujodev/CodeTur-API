@@ -145,3 +145,4 @@ C:\Users\45467298801\Documents\cODEtUr\CodeTur\CodeTur.Api\obj\Debug\net5.0\Code
 C:\Users\45467298801\Documents\cODEtUr\CodeTur\CodeTur.Api\obj\Debug\net5.0\ref\CodeTur.Api.dll
 C:\Users\45467298801\Documents\cODEtUr\CodeTur\CodeTur.Api\obj\Debug\net5.0\CodeTur.Api.pdb
 C:\Users\45467298801\Documents\cODEtUr\CodeTur\CodeTur.Api\obj\Debug\net5.0\CodeTur.Api.genruntimeconfig.cache
+C:\Users\pc\Documents\cODEtUR\CodeTur\CodeTur.Api\bin\Debug\net5.0\BCrypt.Net-Core.dll

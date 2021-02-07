@@ -46,6 +46,7 @@ namespace CodeTur.Dominio.Handlers.Usuarios
             if (usuario.Invalid)
                 return new GenericCommandResult(false, "Usuário invalido", usuario.Notifications);
 
+            _usuarioRepositorio.Adicionar(usuario);
 
             return new GenericCommandResult(true, "Usuario criado", "token");
         }

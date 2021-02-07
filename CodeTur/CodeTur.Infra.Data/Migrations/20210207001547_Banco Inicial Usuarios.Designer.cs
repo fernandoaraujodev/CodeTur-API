@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CodeTur.Infra.Data.Migrations
 {
     [DbContext(typeof(CodeTurContext))]
-    [Migration("20210204151312_Banco Inicial Tabela Usuario")]
-    partial class BancoInicialTabelaUsuario
+    [Migration("20210207001547_Banco Inicial Usuarios")]
+    partial class BancoInicialUsuarios
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -72,6 +72,9 @@ namespace CodeTur.Infra.Data.Migrations
                     b.Property<DateTime>("DataCriacao")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("Descricao")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
                     b.ToTable("Pacotes");
@@ -101,8 +104,8 @@ namespace CodeTur.Infra.Data.Migrations
 
                     b.Property<string>("Senha")
                         .IsRequired()
-                        .HasMaxLength(30)
-                        .HasColumnType("varchar(30)");
+                        .HasMaxLength(60)
+                        .HasColumnType("varchar(60)");
 
                     b.Property<string>("Telefone")
                         .HasMaxLength(11)

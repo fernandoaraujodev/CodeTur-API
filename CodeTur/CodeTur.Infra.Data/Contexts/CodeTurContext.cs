@@ -14,7 +14,7 @@ namespace CodeTur.Infra.Data.Contexts
         //relação de escada
         public CodeTurContext(DbContextOptions<CodeTurContext> options) : base(options)
         {
-
+            Database.EnsureCreated();
         }
 
         //Definindo tabelas
@@ -25,6 +25,7 @@ namespace CodeTur.Infra.Data.Contexts
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Ignore<Notification>();
+
 
             #region Mapeamento Tabela Usuarios
             modelBuilder.Entity<Usuario>().ToTable("Usuarios");
@@ -43,8 +44,8 @@ namespace CodeTur.Infra.Data.Contexts
             modelBuilder.Entity<Usuario>().Property(x => x.Email).IsRequired();
             
             //Senha
-            modelBuilder.Entity<Usuario>().Property(x => x.Senha).HasMaxLength(30);
-            modelBuilder.Entity<Usuario>().Property(x => x.Senha).HasColumnType("varchar(250)");
+            modelBuilder.Entity<Usuario>().Property(x => x.Senha).HasMaxLength(60);
+            modelBuilder.Entity<Usuario>().Property(x => x.Senha).HasColumnType("varchar(60)");
             modelBuilder.Entity<Usuario>().Property(x => x.Senha).IsRequired();
             
             //Telefone
@@ -63,6 +64,17 @@ namespace CodeTur.Infra.Data.Contexts
             modelBuilder.Entity<Usuario>().Property(x => x.DataCriacao).HasColumnType("DateTime");
             modelBuilder.Entity<Usuario>().Property(x => x.DataAlteracao).HasColumnType("DateTime");
             #endregion
+
+            //TODO
+            #region Mapeamento Tabela Comentarios
+
+            #endregion
+            
+            //TODO
+            #region Mapeamento Tabela Pacotes
+
+            #endregion
+
 
             base.OnModelCreating(modelBuilder);
         }

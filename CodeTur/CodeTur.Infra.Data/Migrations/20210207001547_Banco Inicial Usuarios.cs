@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace CodeTur.Infra.Data.Migrations
 {
-    public partial class BancoInicialTabelaUsuario : Migration
+    public partial class BancoInicialUsuarios : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -12,6 +12,7 @@ namespace CodeTur.Infra.Data.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Descricao = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     DataCriacao = table.Column<DateTime>(type: "datetime2", nullable: false),
                     DataAlteracao = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
@@ -28,7 +29,7 @@ namespace CodeTur.Infra.Data.Migrations
                     Nome = table.Column<string>(type: "varchar(40)", maxLength: 40, nullable: false),
                     Email = table.Column<string>(type: "varchar(60)", maxLength: 60, nullable: false),
                     Telefone = table.Column<string>(type: "varchar(11)", maxLength: 11, nullable: true),
-                    Senha = table.Column<string>(type: "varchar(30)", maxLength: 30, nullable: false),
+                    Senha = table.Column<string>(type: "varchar(60)", maxLength: 60, nullable: false),
                     TipoUsuario = table.Column<int>(type: "int", nullable: false),
                     DataCriacao = table.Column<DateTime>(type: "DateTime", nullable: false),
                     DataAlteracao = table.Column<DateTime>(type: "DateTime", nullable: false)

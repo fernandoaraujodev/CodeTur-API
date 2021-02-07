@@ -1,4 +1,7 @@
+using CodeTur.Dominio.Handlers.Usuarios;
+using CodeTur.Dominio.Repositorios;
 using CodeTur.Infra.Data.Contexts;
+using CodeTur.Infra.Data.Repositorios;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -40,7 +43,7 @@ namespace CodeTur.Api
             });
 
             services.AddDbContext<CodeTurContext>(o => o.UseSqlServer
-                (@"Data Source=.\\sqlexpress;
+                (@"Data Source=DESKTOP-DA6MBAT\SQLEXPRESS;
                 Initial Catalog=CodeTur;
                 user id=sa;
                 password=ps132"));
@@ -66,6 +69,17 @@ namespace CodeTur.Api
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Api CodeTur", Version = "v1" });
             });
+
+            #region Injeção Dependência Usuario
+            //registrando IUsuarioRepositorio como service
+            services.AddTransient<IUsuarioRepositorio, UsuarioRepositorio>();
+            
+            //registrando CriarUsuarioHandle como service
+            services.AddTransient<CriarUsuarioHandle, CriarUsuarioHandle>();
+            
+            //registrando LogarUsuarioHandle como service
+            services.AddTransient<LogarUsuarioHandle, LogarUsuarioHandle>();
+            #endregion
 
         }
 

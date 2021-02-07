@@ -12,6 +12,8 @@ namespace CodeTur.Dominio.Entidades
         //deixando visivel os comentarios somente nessa classe
         private readonly List<Comentario> _comentarios;
 
+        public string Descricao { get; set; }
+
         //como n vamos trabalhar com set, fazer return
         public IReadOnlyCollection<Comentario> Comentarios{ get { return _comentarios.ToArray(); }}
 
