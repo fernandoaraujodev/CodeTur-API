@@ -5,8 +5,8 @@ namespace CodeTur.Comum.Handlers
     //Manipular = Handler
     //Handler só herda o objeto anonimo <T> onde esse obj anonimo herde do ICommand
     //Escadinha analogia (um herda do outro, que herda de outro)
-    public interface IHandler<T> where T : ICommand
+    public interface IHandlerCommand<T> where T : ICommand
     {
-        //ICommandResult Handle(T command);
+        ICommandResult Handle(T command);
     }
 }

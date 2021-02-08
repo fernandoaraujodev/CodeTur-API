@@ -8,13 +8,13 @@ using CodeTur.Dominio.Entidades;
 
 namespace CodeTur.Dominio.Handlers.Usuarios
 {
-    public class CriarUsuarioHandle : Notifiable, IHandler<CriarUsuarioCommand>
+    public class CriarUsuarioCommandHandle : Notifiable, IHandlerCommand<CriarUsuarioCommand>
     {
 
         //Injeção de dependência
         private readonly IUsuarioRepositorio _usuarioRepositorio;
 
-        public CriarUsuarioHandle(IUsuarioRepositorio usuarioRepositorio)
+        public CriarUsuarioCommandHandle(IUsuarioRepositorio usuarioRepositorio)
         {
             _usuarioRepositorio = usuarioRepositorio;
         }

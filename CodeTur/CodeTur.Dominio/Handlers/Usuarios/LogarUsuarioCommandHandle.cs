@@ -9,13 +9,13 @@ using System.Text;
 
 namespace CodeTur.Dominio.Handlers.Usuarios
 {
-    public class LogarUsuarioHandle : IHandler<LogarUsuarioCommand>
+    public class LogarUsuarioCommandHandle : IHandlerCommand<LogarUsuarioCommand>
     {
         //Injeção de Dependência
         private readonly IUsuarioRepositorio _usuarioRepositorio;
 
         //construtor da classe
-        public LogarUsuarioHandle(IUsuarioRepositorio usuarioRepositorio)
+        public LogarUsuarioCommandHandle(IUsuarioRepositorio usuarioRepositorio)
         {
             _usuarioRepositorio = usuarioRepositorio;
         }

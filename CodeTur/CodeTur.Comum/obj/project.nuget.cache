@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cwfHCN6I1QcGB7ChxENmNv8lC3VrW7omd8cfyo024Bchj95WQEh0r+E7lcGbvTdIlCkVCCJJFkCnW4foulV3Ww==",
+  "dgSpecHash": "w12nfohxVehC6l360Q5yavS9O+OP/xZDaMwrLmQBPFfS/8FB47SPyD4JfteYRrWTYpDjU/H+A4HSmSWQ+hvvdw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\pc\\Documents\\cODEtUR\\CodeTur\\CodeTur.Comum\\CodeTur.Comum.csproj",
+  "projectFilePath": "C:\\Users\\pc\\Desktop\\codetur\\CodeTur\\CodeTur.Comum\\CodeTur.Comum.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pc\\.nuget\\packages\\bcrypt.net-core\\1.6.0\\bcrypt.net-core.1.6.0.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\flunt\\1.0.5\\flunt.1.0.5.nupkg.sha512"

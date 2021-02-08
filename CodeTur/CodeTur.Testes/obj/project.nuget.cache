@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NpUUCtgXurd9Ia9xBn507//atCWKNDIr9rZEgCOJjd3RVKy3kV2B+GLYUpAbAsh9Ehb+xPjcY65GXeTYcp7I9g==",
+  "dgSpecHash": "RdoCFXy+ZFQOk9LDpzE8s0APjCNfs6O8r+NnKuGqALLXpCrXlEOEbhjHvl+ZGwAiHPHEeXcCxBXn1zZ+TIF0/w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\pc\\Documents\\cODEtUR\\CodeTur\\CodeTur.Testes\\CodeTur.Testes.csproj",
+  "projectFilePath": "C:\\Users\\pc\\Desktop\\codetur\\CodeTur\\CodeTur.Testes\\CodeTur.Testes.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pc\\.nuget\\packages\\bcrypt.net-core\\1.6.0\\bcrypt.net-core.1.6.0.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\coverlet.collector\\1.3.0\\coverlet.collector.1.3.0.nupkg.sha512",

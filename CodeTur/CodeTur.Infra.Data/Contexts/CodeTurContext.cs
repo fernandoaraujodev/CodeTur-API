@@ -67,11 +67,69 @@ namespace CodeTur.Infra.Data.Contexts
 
             //TODO
             #region Mapeamento Tabela Comentarios
+            modelBuilder.Entity<Comentario>().ToTable("Comentarios");
+            //Defini como chave primaria
+            modelBuilder.Entity<Comentario>().Property(x => x.Id);
+            //Texto
+            modelBuilder.Entity<Comentario>().Property(x => x.Texto).HasMaxLength(500);
+            modelBuilder.Entity<Comentario>().Property(x => x.Texto).HasColumnType("varchar(500)");
+            modelBuilder.Entity<Comentario>().Property(x => x.Texto).IsRequired();
+            //Sentimento
+            modelBuilder.Entity<Comentario>().Property(x => x.Sentimento).HasMaxLength(40);
+            modelBuilder.Entity<Comentario>().Property(x => x.Sentimento).HasColumnType("varchar(40)");
+            modelBuilder.Entity<Comentario>().Property(x => x.Sentimento).IsRequired();
+            //Status
+            modelBuilder.Entity<Comentario>().Property(x => x.Status).HasColumnType("int");
 
+            //DataCriacao
+            modelBuilder.Entity<Usuario>().Property(t => t.DataCriacao).HasColumnType("DateTime");
+            modelBuilder.Entity<Usuario>().Property(t => t.DataCriacao).HasDefaultValueSql("GetDate()");
+            //DataAlteracao
+            modelBuilder.Entity<Usuario>().Property(t => t.DataAlteracao).HasColumnType("DateTime");
+            modelBuilder.Entity<Usuario>().Property(t => t.DataAlteracao).HasDefaultValueSql("GetDate()");
             #endregion
-            
+
             //TODO
             #region Mapeamento Tabela Pacotes
+            modelBuilder.Entity<Pacote>().ToTable("Pacotes");
+
+            //Defini como chave primaria
+            modelBuilder.Entity<Pacote>().Property(x => x.Id);
+
+            //Titulo
+            modelBuilder.Entity<Pacote>().Property(x => x.Titulo).HasMaxLength(120);
+            modelBuilder.Entity<Pacote>().Property(x => x.Titulo).HasColumnType("varchar(120)");
+            modelBuilder.Entity<Pacote>().Property(x => x.Titulo).IsRequired();
+
+            //Descrição
+            modelBuilder.Entity<Pacote>().Property(x => x.Descricao).HasColumnType("Text");
+            modelBuilder.Entity<Pacote>().Property(x => x.Descricao).IsRequired();
+
+            //Imagem
+            modelBuilder.Entity<Pacote>().Property(x => x.Imagem).HasMaxLength(250);
+            modelBuilder.Entity<Pacote>().Property(x => x.Imagem).HasColumnType("varchar(250)");
+            modelBuilder.Entity<Pacote>().Property(x => x.Imagem).IsRequired();
+
+            //Ativo
+            //bit = bool no SQL SERVER
+            //0 = false / 1 = true / null
+            modelBuilder.Entity<Pacote>().Property(x => x.Ativo).HasColumnType("bit");
+
+            //Comentarios
+            //Relacionamento entre tabelas - 1 pra mtos
+            //https://www.entityframeworktutorial.net/code-first/configure-one-to-one-relationship-in-code-first.aspx
+            modelBuilder.Entity<Pacote>()
+                .HasMany(c => c.Comentarios)
+                .WithOne(e => e.Pacote)
+                .HasForeignKey(x => x.IdPacote);
+
+            //DataCriacao
+            modelBuilder.Entity<Usuario>().Property(t => t.DataCriacao).HasColumnType("DateTime");
+            modelBuilder.Entity<Usuario>().Property(t => t.DataCriacao).HasDefaultValueSql("GetDate()");
+
+            //DataAlteracao
+            modelBuilder.Entity<Usuario>().Property(t => t.DataAlteracao).HasColumnType("DateTime");
+            modelBuilder.Entity<Usuario>().Property(t => t.DataAlteracao).HasDefaultValueSql("GetDate()");
 
             #endregion
 

@@ -34,7 +34,7 @@ namespace CodeTur.Api.Controllers
         [Route("signup")]
         [HttpPost]
         //props( command, [fromservices] manipular/handler)
-        public GenericCommandResult SingUp(CriarUsuarioCommand command,[FromServices] CriarUsuarioHandle handler)
+        public GenericCommandResult SingUp(CriarUsuarioCommand command,[FromServices] CriarUsuarioCommandHandle handler)
         {
             return (GenericCommandResult)handler.Handle(command);
         }
@@ -42,7 +42,7 @@ namespace CodeTur.Api.Controllers
 
         [Route("signin")]
         [HttpPost]
-        public GenericCommandResult SignIn(LogarUsuarioCommand command,[FromServices] LogarUsuarioHandle handler)
+        public GenericCommandResult SignIn(LogarUsuarioCommand command,[FromServices] LogarUsuarioCommandHandle handler)
         {
             var resultado = (GenericCommandResult)handler.Handle(command);
 

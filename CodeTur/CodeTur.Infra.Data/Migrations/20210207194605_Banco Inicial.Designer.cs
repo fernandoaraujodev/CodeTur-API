@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CodeTur.Infra.Data.Migrations
 {
     [DbContext(typeof(CodeTurContext))]
-    [Migration("20210207001547_Banco Inicial Usuarios")]
-    partial class BancoInicialUsuarios
+    [Migration("20210207194605_Banco Inicial")]
+    partial class BancoInicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -39,23 +39,24 @@ namespace CodeTur.Infra.Data.Migrations
                     b.Property<Guid>("IdUsuario")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid?>("PacoteId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<string>("Sentimento")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(40)
+                        .HasColumnType("varchar(40)");
 
                     b.Property<int>("Status")
                         .HasColumnType("int");
 
                     b.Property<string>("Texto")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("varchar(500)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("IdUsuario");
+                    b.HasIndex("IdPacote");
 
-                    b.HasIndex("PacoteId");
+                    b.HasIndex("IdUsuario");
 
                     b.ToTable("Comentarios");
                 });
@@ -66,6 +67,9 @@ namespace CodeTur.Infra.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<bool>("Ativo")
+                        .HasColumnType("bit");
+
                     b.Property<DateTime>("DataAlteracao")
                         .HasColumnType("datetime2");
 
@@ -73,7 +77,18 @@ namespace CodeTur.Infra.Data.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Descricao")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasColumnType("Text");
+
+                    b.Property<string>("Imagem")
+                        .IsRequired()
+                        .HasMaxLength(250)
+                        .HasColumnType("varchar(250)");
+
+                    b.Property<string>("Titulo")
+                        .IsRequired()
+                        .HasMaxLength(120)
+                        .HasColumnType("varchar(120)");
 
                     b.HasKey("Id");
 
@@ -87,10 +102,14 @@ namespace CodeTur.Infra.Data.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("DataAlteracao")
-                        .HasColumnType("DateTime");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("DateTime")
+                        .HasDefaultValueSql("GetDate()");
 
                     b.Property<DateTime>("DataCriacao")
-                        .HasColumnType("DateTime");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("DateTime")
+                        .HasDefaultValueSql("GetDate()");
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -121,15 +140,17 @@ namespace CodeTur.Infra.Data.Migrations
 
             modelBuilder.Entity("CodeTur.Dominio.Entidades.Comentario", b =>
                 {
+                    b.HasOne("CodeTur.Dominio.Entidades.Pacote", "Pacote")
+                        .WithMany("Comentarios")
+                        .HasForeignKey("IdPacote")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("CodeTur.Dominio.Entidades.Usuario", "Usuario")
                         .WithMany("Comentarios")
                         .HasForeignKey("IdUsuario")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.HasOne("CodeTur.Dominio.Entidades.Pacote", "Pacote")
-                        .WithMany("Comentarios")
-                        .HasForeignKey("PacoteId");
 
                     b.Navigation("Pacote");
 
