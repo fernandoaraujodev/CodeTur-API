@@ -28,7 +28,8 @@ namespace CodeTur.Dominio.Handlers.Pacotes
                     {
                         Id = d.Id,
                         Titulo = d.Titulo,
-                        Descricao = d.Titulo,
+                        Descricao = d.Descricao,
+                        Imagem = d.Imagem,
                         Ativo = d.Ativo,
                         QuantidadeComentarios = d.Comentarios.Count(),
                         DataCriacao = d.DataCriacao

@@ -74,8 +74,8 @@ namespace CodeTur.Api.Controllers
             // Configuramos nosso Token e seu tempo de vida
             var token = new JwtSecurityToken
                 (
-                    "CODETUR",
-                    "CODETUR",
+                    "codetur",
+                    "codetur",
                     claims,
                     expires: DateTime.Now.AddMinutes(120),
                     signingCredentials: credentials
